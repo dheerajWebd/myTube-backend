@@ -9,8 +9,6 @@ async function dbconoction() {
     const responce = await mongoose.connect(
       `${process.env.MONGO_DB_URI}/${DB_NAME}`
     );
-    console.log(`${process.env.MONGO_DB_URI}/${DB_NAME}`);
-    console.log("mongoDB is connected \n");
     return responce;
   } catch (error) {
     console.log("db error", error);
