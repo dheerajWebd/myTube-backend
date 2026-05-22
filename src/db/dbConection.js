@@ -7,7 +7,7 @@ async function dbconoction() {
   }
   try {
     const responce = await mongoose.connect(
-      `${"mongodb://localhost:27017"}/${DB_NAME}`
+      `${process.env.MONGO_DB_URI}/${DB_NAME}`
     );
 console.log( `${"mongodb://localhost:27017"}/${DB_NAME}`)
     console.log("mongoDB is connected \n");
