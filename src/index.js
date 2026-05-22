@@ -6,6 +6,10 @@ import { CommentController } from "./controllers/comment.controller.js";
 import { likeControll } from "./controllers/likeVideo.controller.js";
 import { User } from "./models/user.model.js";
 
+
+
+
+
 dbconoction();
 
 app.use((err, _, res, next) => {

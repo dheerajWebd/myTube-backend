@@ -1,11 +1,18 @@
 import { v2 as cloudinary } from "cloudinary";
 import fs from "fs";
+import path from "path";
 
 cloudinary.config({
   cloud_name: process.env.CLOUD_NAME,
   api_key: process.env.API_KEY,
   api_secret: process.env.API_SECRET,
 });
+
+const tempDir = path.join("public", "temp");
+
+if (!fs.existsSync(tempDir)) {
+  fs.mkdirSync(tempDir, { recursive: true });
+}
 
 const uplodOnCloudinary = async (localFileUrl, folderName, publicId) => {
   console.log(localFileUrl);
