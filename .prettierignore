@@ -1,0 +1,29 @@
+# node modules
+node_modules/
+
+# build folders
+dist/
+build/
+coverage/
+
+# env files
+.env
+.env.*
+
+# logs
+*.log
+
+# lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# minified files
+*.min.js
+*.min.css
+
+# config files (optional)
+.vscode/
+.idea/
+
+# public assets de sakate hai 
