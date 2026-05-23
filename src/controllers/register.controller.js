@@ -13,6 +13,9 @@ import {
   verifyTockenGenreter,
 } from "./controllers.Function.js";
 import crypto from "crypto";
+
+
+
 export const register = asyncHandler(async (req, res, next) => {
   const { role, password, email, fullName, userName } = req.body;
 

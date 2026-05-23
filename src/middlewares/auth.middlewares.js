@@ -11,6 +11,8 @@ export const authMiddileware = asyncHandler(async (req, _, next) => {
       req.query.at?.replace("Bearer ", "") ||
       req.body.at?.replace("Bearer ", "");
 
+    console.log(req.cookies?.accsesToken);
+
     if (!accsesToken)
       throw new ErrorFormater(
         "anauthorization request accses tocken is not available  mc",
@@ -33,7 +35,6 @@ export const authMiddileware = asyncHandler(async (req, _, next) => {
       ...deatileUser._doc,
       accsesToken,
     };
-     
 
     if (!user || !user.isVerified) {
       throw new ErrorFormater(
