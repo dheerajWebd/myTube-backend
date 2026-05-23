@@ -20,22 +20,3 @@ app.use((err, _, res, next) => {
 app.listen(process.env.PORT || 4000, () => {
   console.log("server  is listen in 5000 port");
 });
-// channelProfile()
-// app.get("/l", async (req, res) => {
-//   const r = await filterVideos();
-
-//   res.json(r);
-// });
-
-// const log = await User.find({
-//   userName: "dheerajDwivedi087rgergregefgge",
-// // });
-// console.log(log);
-// echo "# myTube" >> README.md
-// git init
-// git add README.md
-// git commit -m "first commit"
-// git branch -M main
-// git remote add origin https://github.com/dheerajWebd/myTube.git
-// git push -u origin main
-//

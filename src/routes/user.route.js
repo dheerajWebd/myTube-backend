@@ -17,6 +17,7 @@ import {
 import { likeControll } from "../controllers/likeVideo.controller.js";
 import { chatGPTController } from "../api/chatgpt.api.js";
 import { User } from "../models/user.model.js";
+import authenticte from "../controllers/authenticate.controller.js";
 const UserRoute = express.Router();
 
 UserRoute.route("/register").post(
@@ -73,5 +74,5 @@ UserRoute.route("/email/verify/").get(
   authMiddileware,
   varificationemailWithOtp
 );
-
+UserRoute.route("/me").get(authMiddileware,authenticte);
 export default UserRoute;
