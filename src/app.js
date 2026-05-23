@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(express.json({ limit: LIMITE_DATA }));
 app.use(
   cors({
-    origin: [process.env.ORIGIN_FRONTEND, "http://localhost:5173"],
+    origin: [process.env.ORIGIN_FRONTEND, "http://localhost:3000/myTube"],
     credential: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
