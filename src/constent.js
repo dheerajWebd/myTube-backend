@@ -6,6 +6,5 @@ export const Option = {
   httpOnly: true,
   secure: true,
   sameSite: "none",
-  domain: "localhost",
   path: "/",
 };
