@@ -193,8 +193,7 @@ export const varificationEmailAndSendToken = asyncHandler(
       .cookie("emailAccsesToken", token, {
         httpOnly: true,
         secure: true,
-        sameSite: "",
-        domain: "localhost",
+        sameSite: "none",
         expires: 1000 * 5 * 60,
         maxAge: 5 * 60 * 1000,
         path: "/user/api/v1/user/verify",
