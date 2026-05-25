@@ -42,5 +42,6 @@ export const logInUser = asyncHandler(async (req, res, next) => {
         },
         "logedIn "
       )
-    );
+    )
+    .redirect("/");
 });
