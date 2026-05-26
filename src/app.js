@@ -19,6 +19,8 @@ app.use(
   })
 );
 
+app.set("trust proxy", 1);
+
 app.use(
   express.urlencoded({
     extended: true,
@@ -31,5 +33,8 @@ app.use("/channel/api/v1", channelRoute);
 app.use("/video/api/v1", videoRouter);
 app.use("/subscribe/api/v1", subscriptionRouter);
 app.use("/post/api/v1", postRouter);
+
+console.log(app.settings);
+
 
 export { app };
