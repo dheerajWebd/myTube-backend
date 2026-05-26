@@ -15,7 +15,6 @@ if (!fs.existsSync(tempDir)) {
 }
 
 const uplodOnCloudinary = async (localFileUrl, folderName, publicId) => {
-  console.log(localFileUrl);
   if (!localFileUrl) return null;
   try {
     const responce = await cloudinary.uploader.upload(localFileUrl, {
@@ -24,16 +23,11 @@ const uplodOnCloudinary = async (localFileUrl, folderName, publicId) => {
       resource_type: "auto",
     });
 
-    fs.unlink(localFileUrl, err => {
-      console.log(err);
-    });
+    fs.unlink(localFileUrl, err => {});
 
     return responce;
   } catch (error) {
-    console.log(error);
-    fs.unlink(localFileUrl, err => {
-      console.log(err);
-    });
+    fs.unlink(localFileUrl, err => {});
     return null;
   }
 };

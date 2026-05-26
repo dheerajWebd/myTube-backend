@@ -12,7 +12,6 @@ const allMulter = (filter = "") => {
         null,
         file.originalname + "-" + Date.now() + Math.round(Math.random() * 1e9)
       );
-      console.log(file.fieldname);
     },
   });
   const fileFilter = (req, file, cb) => {

@@ -32,10 +32,8 @@ export const refreshAccessToken = asyncHandler(async (req, res) => {
       );
     }
 
-    console.log(user);
 
     if (user.refreshToken !== tocken) {
-      console.log("mismatch \n", tocken);
       throw new ErrorFormater("mismatch the tocken ", [], 500);
     }
 
@@ -53,7 +51,6 @@ export const refreshAccessToken = asyncHandler(async (req, res) => {
       .cookie("Verified", tockens.isVerified, Option)
       .json(new successResponse(200, tockens));
   } catch (error) {
-    console.log(error);
     throw new ErrorFormater(
       error.massage || "somthing went wrong when genaretig the new tokens ",
       [],

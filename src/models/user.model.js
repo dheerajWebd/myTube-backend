@@ -127,7 +127,6 @@ userSchema.pre("save", async function (next) {
 }); // always don't craeate the arrow function
 
 userSchema.methods.isCompare = async function (password) {
-  console.log(password);
 
   return await bcrypt.compare(password, this.password);
 };

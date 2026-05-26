@@ -38,7 +38,6 @@ export const channelController = asyncHandler(async (req, res, next) => {
     "channelcoverimage"
   );
 
-  console.log(uplodeChannelCoverimg?.url);
   const createdChannel = await Channel.create({
     description: description || "",
     owner: isVarified._id,
@@ -110,7 +109,6 @@ export const editChannel = asyncHandler(async (req, res, next) => {
 export const editChannelCoverImg = asyncHandler(async (req, res, next) => {
   const coverImg = req.file.coverImg.path;
   const { channelId } = req.body;
-  console.log(coverImg);
   if (!coverImg || !channelId) {
     return new ErrorFormater(
       "cover image or channelId is required to edit the cover image "

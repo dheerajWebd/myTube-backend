@@ -16,7 +16,6 @@ export const genaretTokensForAuth = async user => {
       Verified: user.isVerified,
     };
   } catch (error) {
-    console.log(error);
     throw new ErrorFormater(
       "somthing went wrong while genareting tokens",
       [""],

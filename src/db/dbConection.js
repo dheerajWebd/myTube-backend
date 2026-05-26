@@ -11,7 +11,6 @@ async function dbconoction() {
     );
     return responce;
   } catch (error) {
-    console.log("db error", error);
     process.exit(1);
   }
 }

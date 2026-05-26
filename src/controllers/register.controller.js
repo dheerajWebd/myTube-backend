@@ -138,7 +138,6 @@ export const register = asyncHandler(async (req, res, next) => {
 export const varificationEmailAndSendToken = asyncHandler(
   async (req, res, next) => {
     const user = req?.user;
-    console.log(user);
 
     if (!user)
       throw new ErrorFormater("unathorised requested plz login", "", 401);
@@ -164,7 +163,6 @@ export const varificationEmailAndSendToken = asyncHandler(
 
     const sequeremail =
       splitemail[0].substring(0, 4) + "*****@" + splitemail[1];
-    console.log(sequeremail);
 
     const userUpdated = await User.findByIdAndUpdate(
       user._id,

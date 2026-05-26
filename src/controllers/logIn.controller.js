@@ -18,7 +18,6 @@ export const logInUser = asyncHandler(async (req, res, next) => {
   const user = await User.findOne({
     $or: [{ email }, { userName }],
   }).select("+password +refreshToken");
-  console.log(user);
 
   if (!user) throw new ErrorFormater("user is not register", [""], 404);
   const c = await user.isCompare(password);

@@ -12,7 +12,6 @@ export const authMiddileware = asyncHandler(async (req, _, next) => {
       // req.query.at?.replace("Bearer ", "") ||
       // req.body.at?.replace("Bearer ", "");
 
-    console.log(req.cookies?.accsesToken);
 
     if (!accsesToken)
       throw new ErrorFormater(

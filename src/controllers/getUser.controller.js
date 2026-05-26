@@ -74,7 +74,6 @@ export const channelProfile = async user => {
     },
   ]);
   // const data2 = await Channel.findOne({ owner: "69cfdfb560b7d3b77f8cb9d7" })
-  console.log(JSON.stringify(channelProfile[0], null, 2));
   return channelProfile;
 };
 

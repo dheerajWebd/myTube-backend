@@ -17,6 +17,4 @@ app.use((err, _, res, next) => {
   });
   next(err);
 });
-app.listen(process.env.PORT || 4000, () => {
-  console.log("server  is listen in 5000 port");
-});
+app.listen(process.env.PORT || 4000, () => {});

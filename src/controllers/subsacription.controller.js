@@ -7,7 +7,6 @@ export const subsacriptionController = asyncHandler(async (req, res, next) => {
     userId: req.user._id,
     channelId: req.params.channelId,
   });
-  console.log(user);
   const selfChannel = await Channel.findOne({ owner: req.user._id });
 
   if (selfChannel)
@@ -15,7 +14,6 @@ export const subsacriptionController = asyncHandler(async (req, res, next) => {
 
   const channelIds = req.params.channelId;
   if (user) {
-    console.log(channelIds);
     await user.deleteOne({ channelId: channelIds });
     await Channel.updateOne(
       { _id: channelIds },

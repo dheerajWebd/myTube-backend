@@ -34,7 +34,6 @@ app.use("/video/api/v1", videoRouter);
 app.use("/subscribe/api/v1", subscriptionRouter);
 app.use("/post/api/v1", postRouter);
 
-console.log(app.settings);
 
 
 export { app };

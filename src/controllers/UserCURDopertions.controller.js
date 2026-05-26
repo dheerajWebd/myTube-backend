@@ -5,7 +5,6 @@ import { ErrorFormater } from "../utils/ErrorFormate.js";
 import successResponse from "../utils/successResponse.js";
 
 export const updatepassword = asyncHandler(async (req, res, next) => {
-  console.log(req.body);
 
   const { currentPassword, newPassword } = req.body;
 
@@ -75,7 +74,6 @@ export const updateProfile = asyncHandler(async (req, res, next) => {
       .redirect("/user/profile");
   } catch (error) {
     throw new ErrorFormater("failed to update profile", [error.message], 500);
-    console.log(error);
   }
 });
 

@@ -59,7 +59,6 @@ export const addVideoPlaylistController = asyncHandler(
     const playlist = await Playlist.find({
       $and: [{ _id: PlaylistId }, { owner: channelId }],
     });
-    console.log(playlist);
 
     if (!playlist) throw new ErrorFormater("playlist is not found ", "", 404);
 
@@ -138,7 +137,6 @@ export const deletePlaylistController = asyncHandler(async (req, res, next) => {
     $and: [{ _id: playlistId }, { owner: channelId }],
   });
 
-  console.log(playlist);
 
   if (!playlist)
     throw new ErrorFormater(

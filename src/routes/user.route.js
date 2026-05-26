@@ -63,7 +63,6 @@ UserRoute.route("/verifiy").put(
   },
   async (req, res, next) => {
     if (req.forgetRout) {
-      console.log(req.forgetRout);
       next();
     }
     return authMiddileware;

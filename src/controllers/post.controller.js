@@ -155,7 +155,6 @@ export const getpostController = asyncHandler(async (req, res, next) => {
       $unwind: "$commentInfo",
     },
   ]);
-  console.log(post[0]);
 
   if (!post) throw new ErrorFormater("Invalid postId provided", "", 400);
   res
