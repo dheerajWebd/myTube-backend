@@ -7,9 +7,10 @@ export const authMiddileware = asyncHandler(async (req, _, next) => {
   try {
     const accsesToken =
       req.cookies?.accsesToken ||
-      req.header("authorization")?.replace("Bearer ", "") ||
-      req.query.at?.replace("Bearer ", "") ||
-      req.body.at?.replace("Bearer ", "");
+      req.header("authorization")?.replace("Bearer ", "") 
+      // ||
+      // req.query.at?.replace("Bearer ", "") ||
+      // req.body.at?.replace("Bearer ", "");
 
     console.log(req.cookies?.accsesToken);
 
